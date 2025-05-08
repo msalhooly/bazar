@@ -1,0 +1,22 @@
+# JWT
+JWT_SECRET=secret_bazar_2025
+
+# PUSHER
+PUSHER_APP_ID=your-app-id
+PUSHER_KEY=your-pusher-key
+PUSHER_SECRET=your-pusher-secret
+PUSHER_CLUSTER=mt1
+
+NEXT_PUBLIC_PUSHER_KEY=your-pusher-key
+NEXT_PUBLIC_PUSHER_CLUSTER=mt1
+
+# TWILIO (اختياري للرسائل)
+TWILIO_ACCOUNT_SID=your-twilio-sid
+TWILIO_AUTH_TOKEN=your-auth-token
+TWILIO_PHONE_NUMBER=+1234567890
+
+# DATABASE (اختياري عند استخدام Prisma)
+DATABASE_URL=file:./dev.db
+
+# EMAIL API (مثل Resend أو SendGrid)
+RESEND_API_KEY=your-resend-key
