@@ -1,34 +1,40 @@
-export default function SignIn() {
+export default function SignUp() {
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-100">
-      <form className="bg-white p-8 rounded shadow-md w-96">
-        <h2 className="text-2xl font-bold mb-6 text-center">تسجيل الدخول</h2>
+    <div style={{
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center",
+      height: "100vh"
+    }}>
+      <img
+        src="/bazar-logo.png"
+        alt="Bazar Logo"
+        style={{ width: "150px", marginBottom: "20px" }}
+      />
+      
+      <h1 style={{ marginBottom: "20px" }}>إنشاء حساب</h1>
+      
+      <form style={{ display: "flex", flexDirection: "column", width: "250px" }}>
+        <label htmlFor="name">الاسم الكامل</label>
+        <input type="text" id="name" name="name" placeholder="محمد علي" style={{ marginBottom: "10px", padding: "8px" }} />
 
-        <div className="mb-4">
-          <label className="block mb-1">البريد الإلكتروني</label>
-          <input
-            type="email"
-            placeholder="example@email.com"
-            className="w-full border border-gray-300 p-2 rounded"
-          />
-        </div>
+        <label htmlFor="email">البريد الإلكتروني</label>
+        <input type="email" id="email" name="email" placeholder="example@email.com" style={{ marginBottom: "10px", padding: "8px" }} />
 
-        <div className="mb-6">
-          <label className="block mb-1">كلمة المرور</label>
-          <input
-            type="password"
-            placeholder="********"
-            className="w-full border border-gray-300 p-2 rounded"
-          />
-        </div>
+        <label htmlFor="password">كلمة المرور</label>
+        <input type="password" id="password" name="password" style={{ marginBottom: "10px", padding: "8px" }} />
 
-        <button
-          type="submit"
-          className="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700"
-        >
-          دخول
+        <button type="submit" style={{ padding: "10px", backgroundColor: "black", color: "white", border: "none" }}>
+          إنشاء حساب
         </button>
       </form>
+
+      <div style={{ marginTop: "15px" }}>
+        <a href="/signin" style={{ color: "blue", textDecoration: "underline" }}>
+          لديك حساب؟ سجل الدخول
+        </a>
+      </div>
     </div>
   );
 }
