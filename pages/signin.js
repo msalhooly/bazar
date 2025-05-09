@@ -1,36 +1,46 @@
 export default function SignIn() {
   return (
-    <div style={{
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      justifyContent: "center",
-      height: "100vh"
-    }}>
-      <img
-        src="/bazar-logo.png"
-        alt="Bazar Logo"
-        style={{ width: "150px", marginBottom: "20px" }}
-      />
-      
-      <h1 style={{ marginBottom: "20px" }}>تسجيل الدخول</h1>
-      
-      <form style={{ display: "flex", flexDirection: "column", width: "250px" }}>
-        <label htmlFor="email">البريد الإلكتروني</label>
-        <input type="email" id="email" name="email" placeholder="example@email.com" style={{ marginBottom: "10px", padding: "8px" }} />
-
-        <label htmlFor="password">كلمة المرور</label>
-        <input type="password" id="password" name="password" style={{ marginBottom: "10px", padding: "8px" }} />
-
-        <button type="submit" style={{ padding: "10px", backgroundColor: "black", color: "white", border: "none" }}>
-          دخول
-        </button>
-      </form>
-
-      <div style={{ marginTop: "15px" }}>
-        <a href="/signup" style={{ color: "blue", textDecoration: "underline" }}>
-          ليس لديك حساب؟ أنشئ حساب الآن
-        </a>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh', direction: 'rtl' }}>
+      <div style={{ maxWidth: '440px', width: '100%', textAlign: 'center' }}>
+        <img
+          src="/bazar-logo.png"
+          alt="Bazar Logo"
+          style={{ width: '120px', height: '120px', objectFit: 'contain', margin: '0 auto 20px' }}
+        />
+        <h2 style={{ marginBottom: '20px' }}>تسجيل الدخول</h2>
+        <form>
+          <div style={{ marginBottom: '10px', textAlign: 'right' }}>
+            <label>البريد الإلكتروني</label>
+            <input
+              type="email"
+              placeholder="example@email.com"
+              style={{ width: '100%', padding: '10px', marginTop: '5px' }}
+            />
+          </div>
+          <div style={{ marginBottom: '15px', textAlign: 'right' }}>
+            <label>كلمة المرور</label>
+            <input
+              type="password"
+              placeholder="*******"
+              style={{ width: '100%', padding: '10px', marginTop: '5px' }}
+            />
+          </div>
+          <button
+            type="submit"
+            style={{
+              backgroundColor: 'black',
+              color: 'white',
+              padding: '10px',
+              width: '100%',
+              cursor: 'pointer',
+            }}
+          >
+            دخول
+          </button>
+        </form>
+        <p style={{ marginTop: '15px', fontSize: '14px' }}>
+          ليس لديك حساب؟ <a href="/signup" style={{ color: 'blue' }}>إنشاء حساب</a>
+        </p>
       </div>
     </div>
   );
